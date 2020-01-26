@@ -43,7 +43,6 @@ class LoginBonusEvent extends EventHandler {
 		if ($user->getLastLogin() === $yesterday) {
 			$user->setLoginCount($user->getLoginCount() + 1);
 			if ($user->getLoginCount() % (int)$config->get("period-count") === 0) {
-				$message .= str_replace("{%1}", $user->getLoginCount(), $config->get("period-message")) . "\n";
 				$bonus += (int)$config->get("period-bonus");
 			}
 		} else {
@@ -53,6 +52,7 @@ class LoginBonusEvent extends EventHandler {
 		$plugin->getRepository()->setLoginUser($user);
 		$economy = EconomyAPI::getInstance();
 		$economy->addMoney($name, (int)$bonus);
+		$message .= str_replace("{%1}", $user->getLoginCount(), $config->get("period-message")) . "\n";
 		$message .= str_replace("{%1}", $economy->getMonetaryUnit() . $bonus, $config->get("send-bonus-message"). "\n");
 		$this->formView[$name] = $message;
 	}
