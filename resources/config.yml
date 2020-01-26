@@ -1,11 +1,3 @@
-# LoginBonus-PMMP
-This is a plugin that implements a login bonus on the PocketMine-MP server.  
-  
-PocketMine-MPサーバーにログインボーナスを加えます。  
-EconomyAPI対応。
-  
-
-```yaml
 #ログインボーナスで付与する金額
 bonus: 1000
 
@@ -17,4 +9,3 @@ period-message: §a[i] > 連続ログイン{%1}回！
 #ログインボーナス付与
 send-bonus-message: §b[i] > ログインボーナス {%1} を配布しました！
 form-title: ログインボーナス
-```

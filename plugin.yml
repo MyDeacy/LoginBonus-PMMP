@@ -1,0 +1,6 @@
+name: LoginBonus
+main: net\mydeacy\loginbonus\LoginBonus
+version: 0.0.1
+api: [3,9]
+author: MyDeacy
+description: Login bonus plugin
