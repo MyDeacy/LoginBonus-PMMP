@@ -2,7 +2,6 @@
 
 namespace net\mydeacy\loginbonus\interfaces;
 
-use http\Client\Curl\User;
 use net\mydeacy\loginbonus\LoginUser;
 
 interface LoginBonusRepository {
